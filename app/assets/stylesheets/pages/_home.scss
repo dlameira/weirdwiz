@@ -1,1 +1,67 @@
-// Specific CSS for your home-page
+.home-container {
+  padding: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+
+}
+
+.post-preview {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #00FF00;
+  background-color: transparent;
+  height: 100px;
+  overflow: hidden;
+
+  // &:first-of-type {
+  //   border-color: #FF00FF;
+  // }
+
+  // &:nth-child(2) {
+  //   border-color: #2313ff;
+  // }
+
+  h3, p {
+    transition: all 1s ease-in-out;
+  }
+
+  .post-content {
+    font-family: "Sysfont";
+    display: none;
+    overflow: hidden; /* hide any overflow */
+    // white-space: nowrap; /* prevent line breaks */
+    // text-overflow: ellipsis; /* show ellipsis when text is too long */
+    max-height: 3em; /* show only 3 lines of text */
+
+  }
+
+  }
+
+  .post-preview:hover {
+    background-color: #fc28f5;
+    color: #000000;
+
+    p {
+      display: none;
+    }
+
+    h3 {
+      font-size: 60%;
+    }
+
+    .post-content {
+      display: block;
+
+    }
+  }
+
+.drop-preview {
+  // position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #00F;
+  background-color: transparent;
+  overflow: hidden;
+
+  // z-index: 1; /* set a low z-index to start */
+}
