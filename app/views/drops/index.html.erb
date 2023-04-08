@@ -1,0 +1,12 @@
+<h1>Drops</h1>
+
+<ul>
+  <% @drops.each do |drop| %>
+    <li>
+      <h2><%= drop.title %></h2>
+      <p><%= drop.description %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Drop", new_drop_path %>
