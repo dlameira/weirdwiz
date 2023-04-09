@@ -5,63 +5,94 @@
 
 }
 
+.header-posts {
+  display: flex;
+  justify-content:space-between;
+  text-align: end;
+  color: rgb(200, 200, 212);
+
+}
+
 .post-preview {
-  padding: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  border: 2px solid #00FF00;
+  border: 2px solid #09f638;
   background-color: transparent;
-  height: 100px;
+  min-height: 240px;
+  max-height: 250px;
   overflow: hidden;
+  padding: 10px;
+  display: block;
+  position: relative;
 
-  // &:first-of-type {
-  //   border-color: #FF00FF;
-  // }
-
-  // &:nth-child(2) {
-  //   border-color: #2313ff;
-  // }
-
-  h3, p {
-    transition: all 1s ease-in-out;
-  }
-
-  .post-content {
-    font-family: "Sysfont";
-    display: none;
-    overflow: hidden; /* hide any overflow */
-    // white-space: nowrap; /* prevent line breaks */
-    // text-overflow: ellipsis; /* show ellipsis when text is too long */
-    max-height: 3em; /* show only 3 lines of text */
+  h3 {
+    font-size: 2rem;
 
   }
 
+
+
+  .trix-content {
+    color: #fff5f5; // Add your desired text color
+    font-size: 16px; // Adjust this value to your desired font size
+
   }
 
-  .post-preview:hover {
-    background-color: #fc28f5;
-    color: #000000;
 
-    p {
-      display: none;
+
+    &.older-post-preview {
+      height: 83px; // Set the height to one-third of the original height (250px / 3)
+      overflow: hidden;
+      padding: 10px;
     }
+}
 
-    h3 {
-      font-size: 60%;
-    }
 
-    .post-content {
-      display: block;
 
-    }
-  }
+.bio {
+  width: 300px;
+  height: auto;
+  border: 2px solid #ff0cf7;
+  background-color: black;
+  color: whitesmoke;
+  overflow: hidden;
+  margin-bottom: 20px;
+  justify-content: center;
+  font-size: 14px;
+  padding: 25px;
+  hyphens: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.drop-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
 
 .drop-preview {
-  // position: absolute;
-  width: 200px;
-  height: 200px;
+  padding: 10px;
+  width: 140px;
+  height: 140px;
   border: 2px solid #00F;
   background-color: transparent;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
-  // z-index: 1; /* set a low z-index to start */
+  // justify-content: space-between;
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .trix-content {
+    color: #fff7ff; // Add your desired text color
+    font-size: 12px; // Adjust this value to your desired font size
+
+
+  }
 }
