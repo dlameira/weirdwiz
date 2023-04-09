@@ -1,26 +1,46 @@
 <div class="home-container">
-  <div class="row">
-    <div class="col-md-9">
-      <% @posts.each do |post| %>
-        <%= link_to post_path(post) do %>
-          <div class="post-preview">
-            <h3><%= post.title %></h3>
-            <p><%= post.callout %></p>
-            <div class="post-content">
-              <%= post.content %>
+
+  <div class="row justify-content-center">
+
+    <div class="col-md-5">
+
+      <div class="header-posts">
+        <%= image_tag("weirdwiz.png", width: '25%')%>
+        <h5>a blog about art, creativity, tech, books and consciouness</h5>
+      </div>
+
+
+        <% @posts.each_with_index do |post, index| %>
+          <%= link_to post_path(post) do %>
+            <div class="post-preview <%= 'older-post-preview' if index > 2 %>">
+
+                <h3><%= post.title %></h3>
+                <%= post.content %>
+
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+
     <div class="col-md-3">
-      <% @drops.each do |drop| %>
-        <div class="drop-preview">
-          <h3><%= drop.title %></h3>
-          <p><%= drop.description %></p>
-        </div>
-        <hr>
-      <% end %>
+
+      <div class="bio">
+        <%= image_tag("pixelnovo2.png", width: '50%')%>
+        <h3>Daniel Lameira</h3>
+        <p html lang="pt">Sou um editor e pesquisador sobre tecnologia, arte e criatividade. Pai de um menino maravilhoso, fundador da Antofágica e da Seiva, editei muitos livros (que você pode ver <strong>aqui</strong>). Criei este blog para poder registrar algumas mudanças, pensamentos e indicações de conteúdos que gosto.</p>
+      </div>
+
+      <div class="drop-container">
+        <% @drops.each_slice(2) do |drop_group| %>
+          <% drop_group.each do |drop| %>
+            <div class="drop-preview">
+              <h3><%= drop.title %></h3>
+              <%= drop.description %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
     </div>
   </div>
 </div>

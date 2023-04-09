@@ -63,6 +63,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker'
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -74,6 +76,8 @@ group :development do
 end
 
 group :test do
+  gem 'faker'
+
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"

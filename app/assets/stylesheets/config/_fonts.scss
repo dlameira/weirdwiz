@@ -25,4 +25,12 @@ $headers-font: "Sysfont", "Helvetica", "sans-serif";
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'NewYork';
+  src: url('NewYorkSmallRegular.otf') format('otf'),
+       url('NewYorkSmallRegular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $my-font: "Sysfont"
