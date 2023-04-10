@@ -15,8 +15,7 @@
             <div class="post-preview <%= 'older-post-preview' if index > 2 %>">
 
                 <h3><%= post.title %></h3>
-                <%= post.content %>
-
+                <p><%= post.first_paragraph %></p>
             </div>
           <% end %>
         <% end %>
@@ -35,7 +34,7 @@
           <% drop_group.each do |drop| %>
             <div class="drop-preview">
               <h3><%= drop.title %></h3>
-              <%= drop.description %>
+              <p><%= drop.first_sentence %></p>
             </div>
           <% end %>
         <% end %>

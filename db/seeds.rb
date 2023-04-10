@@ -7,7 +7,10 @@ Drop.destroy_all
 # Generate sample Posts
 16.times do
   post_title = Faker::TvShows::TwinPeaks.quote.split[0...6].join(' ')
-  post_content = 4.times.map { Faker::TvShows::BrooklynNineNine.quote }.join("\n\n")
+
+  num_paragraphs = rand(3..4)
+  post_content = num_paragraphs.times.map { "<p>#{Faker::TvShows::BrooklynNineNine.quote}</p>" }.join
+
   post_callout = Faker::Quote.famous_last_words.split[0...10].join(' ')
 
   Post.create!(
