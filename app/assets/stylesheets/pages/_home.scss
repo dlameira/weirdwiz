@@ -18,8 +18,7 @@
   margin-bottom: 20px;
   border: 2px solid #09f638;
   background-color: transparent;
-  min-height: 240px;
-  max-height: 250px;
+  height: auto;
   overflow: hidden;
   padding: 10px;
   display: block;
@@ -32,8 +31,8 @@
 
 
 
-  .trix-content {
-    color: #fff5f5; // Add your desired text color
+  p {
+    color: whitesmoke; // Add your desired text color
     font-size: 16px; // Adjust this value to your desired font size
 
   }
@@ -41,7 +40,7 @@
 
 
     &.older-post-preview {
-      height: 83px; // Set the height to one-third of the original height (250px / 3)
+      height: auto; // Set the height to one-third of the original height (250px / 3)
       overflow: hidden;
       padding: 10px;
     }
@@ -70,29 +69,31 @@
 .drop-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-}
+  grid-gap: 10px;
+  max-width: 300px;
+  justify-content: start;
+
 
 .drop-preview {
+  position: relative;
   padding: 10px;
-  width: 140px;
-  height: 140px;
+  width: 145px;
+  height: 145px;
   border: 2px solid #00F;
   background-color: transparent;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 
-  // justify-content: space-between;
-
   h3 {
     font-size: 1rem;
   }
 
-  .trix-content {
-    color: #fff7ff; // Add your desired text color
-    font-size: 12px; // Adjust this value to your desired font size
 
+}
+p {
+  color: whitesmoke; // Add your desired text color
+  font-size: 12px; // Adjust this value to your desired font size
 
-  }
+}
 }
