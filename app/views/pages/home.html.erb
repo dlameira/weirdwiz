@@ -4,13 +4,6 @@
 
     <div class="col-md-5">
 
-      <div class="header-posts d-flex align-items-center justify-content-between">
-        <%= link_to root_path do %>
-          <%= image_tag("weirdwiz.png", width: '25%')%>
-        <% end %>
-        <h5>a blog about art, creativity, tech, books and consciouness</h5>
-      </div>
-
 
         <% @posts.each_with_index do |post, index| %>
           <%= link_to post_path(post) do %>
