@@ -3,11 +3,13 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @user = current_user
   end
 
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments
+    @user = current_user
   end
 
   def new
@@ -19,6 +21,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    authorize @post
     @post = Post.new(post_params)
 
     if @post.save
@@ -29,6 +32,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    authorize @post
     @post = Post.find(params[:id])
 
     if @post.update(post_params)

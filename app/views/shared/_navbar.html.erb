@@ -1,12 +1,30 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-dark">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+    <div class="d-flex align-items-center">
+      <%= link_to root_path do %>
+        <div class="left-font d-flex align-items-center m-2">
+          <h1 class="home-button p-3"> Weirdwiz </h1>
+          <p>a blog about art creativity tech<br>books and consciousness</p>
+        </div>
+      <% end %>
+    </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div>
+     <ul class="right-navbar m-3">
+        <li>
+          <%= link_to "I worked on", "#", class: "nav-link" %>
+        </li>
+        <li>
+          <%= link_to "Posts", "#", class: "nav-link" %>
+        </li>
+        <li>
+          <%= link_to "Drops", "#", class: "nav-link" %>
+        </li>
+         <li>
+          <%= link_to "Me", "#", class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">

@@ -1,0 +1,12 @@
+    <%= simple_form_for(@post) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :callout%>
+      <%= f.input :content %>
+    <div class="container d-flex justify-content-between">
+      <div class="row">
+        <%= f.submit %>
+      </div>
+        <div class="row">
+          <%= button_to "Back", posts_path(@post), class: "border-0" %>
+        </div>
+      <% end %>

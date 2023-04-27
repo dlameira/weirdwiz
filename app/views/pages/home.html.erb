@@ -4,11 +4,6 @@
 
     <div class="col-md-5">
 
-      <div class="header-posts">
-        <%= image_tag("weirdwiz.png", width: '25%')%>
-        <h5>a blog about art, creativity, tech, books and consciouness</h5>
-      </div>
-
 
         <% @posts.each_with_index do |post, index| %>
           <%= link_to post_path(post) do %>
@@ -32,10 +27,12 @@
       <div class="drop-container">
         <% @drops.each_slice(2) do |drop_group| %>
           <% drop_group.each do |drop| %>
+            <%= link_to drop_path(drop) do %>
             <div class="drop-preview">
               <h3><%= drop.title %></h3>
               <p><%= drop.first_sentence %></p>
             </div>
+            <% end %>
           <% end %>
         <% end %>
       </div>
